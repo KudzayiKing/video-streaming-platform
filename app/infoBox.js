@@ -52,7 +52,7 @@ const InfoBox = () => {
                 </div>
                 <div className='pt-4 pl-2 w-[96%]'>
                 <p style={cinzel.style} className='text-white text-2xl'>TITLE</p>
-                <p  className='text-white text-sm pt-2'>The Medellin cartel - the most violent, ruthless and wealthy criminal organization in the history of modern crime. And the one man who lorded over them all... Pablo Escobar. NARCOS is the true story of the US and Colombian efforts to battle the Medellin cartel during the cocaine-fueled drug wars of the 1980s.</p>
+                <p  className='text-white text-sm pt-2'>The Medellin cartel - the most violent, ruthless and wealthy criminal organization in the history of modern crime. And the one man who lorded over them all... Pablo Escobar. NARCOS is the true story of the US efforts to battle the Medellin cartel during the cocaine-fueled drug wars of the 1980s.</p>
                 </div>
 
             </div>

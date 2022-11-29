@@ -13,7 +13,7 @@ const ButtomMenu = () => {
     }
     return(
         <div className='relative '>
-        <div className='z-20 fixed h-14 w-14  right-1 bottom-2 rounded-full  bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100/10 shadow-lg'>
+        <div className='z-20 fixed h-14 w-14  right-1 bottom-2 rounded-full  bg-black  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100/20  shadow-lg'>
         <button style={{ WebkitTapHighlightColor: 'transparent' }} onClick={toggleFooterVisibility}  className="z-10 relative pl-3 top-[6px] text-white flex flex-col justify-center items-center"><TiThMenuOutline color="#FFFFFF" size="26px"/><p className='text-xs font-normal'>Menu</p>
         </button>
 

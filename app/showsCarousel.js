@@ -3,6 +3,8 @@ import Card from './card';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { Cinzel } from '@next/font/google';
 import { MdArrowForwardIos } from 'react-icons/md';
+import InfoBox from './infoBox';
+import { useState } from 'react';
 
 const cinzel = Cinzel({
     subsets: 'latin',
@@ -171,6 +173,9 @@ const shows = [
   ];
 
 const ShowsCarousel = () => {
+
+  const [infoBoxVisibility, setInfoBoxVisibility] = useState(true);
+
     return(
         <div className='z-10 flex flex-col'>
             <p style={cinzel.style} className='flex  items-center  px-1 text-white text-base font-semibold pt-1 py-[1px] pl-1 '>TV Series<div><MdArrowForwardIos size={16}/></div></p>
@@ -183,6 +188,8 @@ const ShowsCarousel = () => {
                     ))}
                 </Carousel>
             </div>
+            {infoBoxVisibility && <InfoBox/>}
+
         </div>
     )
 }

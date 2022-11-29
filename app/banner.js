@@ -170,7 +170,7 @@ const Banner = () => {
             className=""
             style={{ position: "relative", width: "100vw", height: "534px" }}
         >
-            <div className="absolute top-3/4  text-white z-10  left-0 right-0 ">
+            <div className="absolute top-3/4  text-white z-10  left-0 right-0">
                 <div className="flex flex-col justify-center items-center ">
                     <div style={cinzel.style} className="text-4xl text-shadow-xl" >
                         <p className="">{randomShow.title}</p>
@@ -184,7 +184,7 @@ const Banner = () => {
                 <div className="flex justify-between space-x-6 items-center pt-4 h-15">
                     <div className="flex flex-col justify-center items-center w-32 ">
                         <FaRegHeart size={22} />
-                        <p className="text-xs pt-1 font-light">My List</p>
+                        <p className="text-xs pt-1 font-light text-shadow-lg">My List</p>
                     </div>
                     <div>
                         <button className="flex justify-center items-center p-3 h-11 w-40 text-black text-lg rounded-xl  font-bold bg-white space-x-1 shadow-xl">

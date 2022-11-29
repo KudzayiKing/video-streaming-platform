@@ -13,8 +13,8 @@ import Link from 'next/link';
 const Footer = () => {
 
     return(
-        <div className='z-20 relative h-screen w-screen md:hidden flex justify-start pl-1 shadow-lg'>
-            <div className='fixed bottom-2 flex items-center justify-evenly  text-white  h-14 w-10/12 bg-white  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100/10 rounded-2xl'>
+        <div className='z-20 relative h-screen w-screen md:hidden flex justify-start pl-1 '>
+            <div className='fixed bottom-2 flex items-center justify-evenly  text-white  h-14 w-10/12 bg-black  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100/20  shadow-lg rounded-2xl'>
                 <Link  href='/' className="flex flex-col justify-center items-center"><RiHome2Line color="#FFFFFF" size="26px"/><p className="text-xs font-normal space-y-1 text-shadow-xl">Home</p></Link>
                 <Link href='/search' className="flex flex-col justify-center items-center"><RiSearchLine color="#FFFFFF" size="26px"/><p className="text-xs font-normal space-y-1 text-shadow-xl">Search</p></Link>
                 <Link href='/myList' className="flex flex-col justify-center items-center"><RiHeartLine color="#FFFFFF" size="26px"/><p className="text-xs font-normal space-y-1 text-shadow-xl">My List</p></Link>

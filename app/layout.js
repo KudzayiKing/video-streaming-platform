@@ -175,7 +175,7 @@ export default function RootLayout({ children }) {
       <head/>
       </Head>
       <Navigation/>
-      <main>
+      <main className="pt-12">
         <Banner/>
  
         <section>

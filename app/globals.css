@@ -28,3 +28,16 @@
 
 }
 
+
+
+
+
+video::-webkit-media-controls-timeline {
+  background-color: #fb923c;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+
+
+
+

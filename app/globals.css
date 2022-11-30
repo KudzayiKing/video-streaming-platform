@@ -38,6 +38,11 @@ video::-webkit-media-controls-timeline {
   margin-bottom: 20px;
 }
 
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 

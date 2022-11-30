@@ -206,7 +206,7 @@ const Banner = () => {
                     blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                     /*style={imageStyle}*/
                     fill={true}
-                    className="rounded-xl"
+                    className="rounded-2xl"
                 />
             </div>
         </div>

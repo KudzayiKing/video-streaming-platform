@@ -18,10 +18,10 @@ const shows = [
       imageMobile: "https://ik.imagekit.io/ojfedrprt/narcos.jpg",
       image: "https://i.ibb.co/crqqjk3/netflix-narcos-main-1280x720.jpg",
       fullVideo:
-        "https://ik.imagekit.io/ojfedrprt/Narcos_-_Main_Trailer_-_Netflix__HD___2_.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667252861385",
+        "https://ik.imagekit.io/ojfedrprt/Narcos_-_Main_Trailer_-_Netflix__HD___2_.mp4",
       videoID: "7VAqY7nxauE",
       url:
-        "https://ik.imagekit.io/ojfedrprt/Narcos_-_Main_Trailer_-_Netflix__HD___2_.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667252861385",
+        "https://ik.imagekit.io/ojfedrprt/Narcos_-_Main_Trailer_-_Netflix__HD___2_.mp4",
       writers: " Chris Brancato, Eric Newman, Carlo Bernard.",
       genreA: "Drama",
       genreB: "USA",
@@ -52,7 +52,7 @@ const shows = [
           genreC: "TV Series",
         director: "Jesse Armstrong",
         actors: "	Hiam Abbass,Nicholas Braun,Brian Cox,Kieran Culkin,Peter Friedman,Natalie Gold,Matthew Macfadyen, Alan Ruck",
-        duration: "",
+        duration: "1h 10min",
         year: "2018 - Present",
         age: "18+",
         summary:
@@ -79,7 +79,7 @@ const shows = [
         year: "2014 - 2020",
         age: "18+",
         summary:
-          "Power tells the story of James St. Patrick , an intelligent, smooth, yet, ruthless drug dealer who goes by the alias of Ghost He wishes to leave the criminal world to pursue legitimate business interests as a nightclub owner. St. Patrick aims to balance those two lives, while also avoiding police capture, trying to navigate his crumbling marriage and manage shifting economic alliances."
+          "Power tells the story of James St. Patrick , an intelligent, smooth, yet, ruthless drug dealer who goes by the alias of Ghost He wishes to leave the criminal world to pursue legitimate business interests as a nightclub owner. St. Patrick aims to balance those two lives."
       },
     {
       id: 4,
@@ -87,10 +87,10 @@ const shows = [
       imageMobile: "https://ik.imagekit.io/ojfedrprt/witcher.jpg",
       image: "https://i.ibb.co/wCFMTRX/maxresdefault.jpg",
       fullVideo:
-        "https://ik.imagekit.io/ojfedrprt/THE_WITCHER___MAIN_TRAILER___NETFLIX.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253435297",
+        "https://ik.imagekit.io/ojfedrprt/THE_WITCHER___MAIN_TRAILER___NETFLIX.mp4",
       videoID: "ndl1W4ltcmg",
       url:
-        "https://ik.imagekit.io/ojfedrprt/THE_WITCHER___MAIN_TRAILER___NETFLIX.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253435297",
+        "https://ik.imagekit.io/ojfedrprt/THE_WITCHER___MAIN_TRAILER___NETFLIX.mp4",
       writers: "Lauren Schmidt Hissrich",
       genreA: "Adventure",
       genreB: "USA",
@@ -109,10 +109,10 @@ const shows = [
       imageMobile: "https://ik.imagekit.io/ojfedrprt/Morpheus-Tom-Sturridge.jpg",
       image: "https://i.ibb.co/m5NF1tb/imagefffs.jpg",
       fullVideo:
-        "https://ik.imagekit.io/ojfedrprt/The_Sandman___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253741578",
+        "https://ik.imagekit.io/ojfedrprt/The_Sandman___Official_Trailer___Netflix.mp4",
       videoID: "7VAqY7nxauE",
       url:
-        "https://ik.imagekit.io/ojfedrprt/The_Sandman___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253741578",
+        "https://ik.imagekit.io/ojfedrprt/The_Sandman___Official_Trailer___Netflix.mp4",
       writers: "Neil Gaiman, Joe Simon, Jack Kirby.",
       genreA: "Fantasy",
       genreB: "USA",
@@ -131,10 +131,10 @@ const shows = [
       imageMobile: "https://ik.imagekit.io/ojfedrprt/anne.jpg",
       image: "https://i.ibb.co/pn3CtGM/Anne-With-An-E-Season-4.jpg",
       fullVideo:
-        "https://ik.imagekit.io/ojfedrprt/Anne___Official_Trailer__HD____Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253957372",
+        "https://ik.imagekit.io/ojfedrprt/Anne___Official_Trailer__HD____Netflix.mp4",
       videoID: "S5qJXYNNINo",
       url:
-        "https://ik.imagekit.io/ojfedrprt/Anne___Official_Trailer__HD____Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667253957372",
+        "https://ik.imagekit.io/ojfedrprt/Anne___Official_Trailer__HD____Netflix.mp4",
       writers: "Moira Walley-Beckett",
       genreA: "Drama",
       genreB: "USA",
@@ -154,10 +154,10 @@ const shows = [
       imageMobile: "https://ik.imagekit.io/ojfedrprt/clickbait.jpg",
       image: "https://i.ibb.co/MVddxRy/maxresdefault-1.jpg",
       fullVideo:
-        "https://ik.imagekit.io/ojfedrprt/Clickbait___Official_Teaser___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667254577049",
+        "https://ik.imagekit.io/ojfedrprt/Clickbait___Official_Teaser___Netflix.mp4",
       videoID: "QwVLObz0MGs",
       url:
-        "https://ik.imagekit.io/ojfedrprt/Clickbait___Official_Teaser___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667254577049",
+        "https://ik.imagekit.io/ojfedrprt/Clickbait___Official_Teaser___Netflix.mp4",
       writers: "Tony Ayres, Christian White",
       genreA: "Mystery",
       genreB: "USA",
@@ -174,21 +174,68 @@ const shows = [
 
 const ShowsCarousel = () => {
 
-  const [infoBoxVisibility, setInfoBoxVisibility] = useState(true);
+  const [infoBoxVisibility, setInfoBoxVisibility] = useState(false);
+
+  const [showIndex, setShowIndex] = useState();
+
+  const clickedShowIds = [shows[showIndex]]
+
+  const showInfoBox = (event, id) => {
+    setShowIndex(id)
+    setInfoBoxVisibility(true);
+  }
+
+  const closeInfoBox = (event) => {
+    setInfoBoxVisibility(false);
+  }
 
     return(
         <div className='z-10 flex flex-col'>
             <p style={cinzel.style} className='flex  items-center  px-1 text-white text-base font-semibold pt-1 py-[1px] pl-1 '>TV Series<div><MdArrowForwardIos size={16}/></div></p>
             <div className=' left-0 right-0 h-[200px]'>
                 <Carousel show={3} slide={3} swiping={true} leftArrow={true} rightArrow={true} infinite={true}>
-                    {shows.map(show =>(
-                        <div key={show.id}>
-                            <Card imageMobile={show.imageMobile} id={show.id} trailer={show.url} fullVideo={show.fullVideo}/>
+                    {shows.map((show, index)=>(
+                        <div key={show.id} onClick={(event)=>{showInfoBox(event, index)}}>
+                            <Card 
+                            imageMobile={show.imageMobile} 
+                            id={show.id} 
+                            trailer={show.url} 
+                            fullVideo={show.fullVideo} 
+                            index={index}
+                            />
                         </div>
                     ))}
                 </Carousel>
             </div>
-            {infoBoxVisibility && <InfoBox/>}
+            {infoBoxVisibility && clickedShowIds.map((clickedShowId,index)=>(
+              <div key={clickedShowId.id}>
+              <InfoBox
+              index={index}
+              imageMobile={clickedShowId.imageMobile}
+              clickedShowIds={clickedShowIds}
+              clickedShowId={clickedShowId}
+              shows={shows}
+              infoBoxVisibility={setInfoBoxVisibility}
+              showInfoBox={showInfoBox}
+              closeInfoBox={closeInfoBox}
+              id={clickedShowId.id}
+              title={clickedShowId.title}
+              image={clickedShowId.image}
+              fullVideo={clickedShowId.fullVideo}
+              url={clickedShowId.url}
+              writers={clickedShowId.writers}
+              genreA={clickedShowId.genreA}
+              director={clickedShowId.director}
+              actors={clickedShowId.actors}
+              duration={clickedShowId.duration}
+              year={clickedShowId.year}
+              age={clickedShowId.age}
+              summary={clickedShowId.summary}
+              />
+              </div>
+            ))
+              
+            }
 
         </div>
     )

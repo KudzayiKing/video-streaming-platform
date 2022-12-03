@@ -11,12 +11,47 @@ const cinzel = Cinzel({
 
 const myList = [];
 
-const MyListCarousel = () => {
+const MyListCarousel = ({
+    index,
+    imageMobile,
+    clickedShowIds,
+    clickedShowId,
+    InfoBoxVisibility,
+    setInfoBoxVisibility,
+    showInfoBox,
+    closeInfoBox,
+    shows,
+    id,
+    title,
+    image,
+    fullVideo,
+    videoID,
+    url,
+    writers,
+    genreA,
+    director,
+    actors,
+    duration,
+    year,
+    age,
+    summary
+}) => {
     return(
         <div>
             <p style={cinzel.style} className='flex  items-center  px-1 text-white text-base font-semibold py-[1px] pl-1'>My List<div><MdArrowForwardIos size={16}/></div></p>
             <div className='z-10 left-0 right-0 h-[200px]'>
                 <Carousel show={3} slide={3} swiping={true} leftArrow={true} rightArrow={true} infinite={false}>
+
+                        <div key={id} onClick={(event)=>{showInfoBox(event, index)}}>
+                            <Card 
+                            imageMobile={imageMobile} 
+                            id={id} 
+                            trailer={url} 
+                            fullVideo={fullVideo} 
+                            index={index}
+                            />
+                            </div>
+
                 </Carousel>
             </div>
         </div>

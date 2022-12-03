@@ -181,7 +181,7 @@ export default function RootLayout({ children }) {
         <section>
         <ShowsCarousel/>
         <DocumentariesCarousel/>
-        <MyListCarousel/>
+
         </section>
         <div>{children}</div>
         </main>

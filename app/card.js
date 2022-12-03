@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-const Card = ({ imageMobile, id, trailer, fullVideo }) => {
+const Card = ({ imageMobile, id, trailer, fullVideo, index, showInfoBox }) => {
     return(
         <div>
         <div className='md:hidden '>

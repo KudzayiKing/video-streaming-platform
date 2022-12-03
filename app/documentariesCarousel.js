@@ -3,6 +3,8 @@ import Card from './card';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { Cinzel } from '@next/font/google';
 import { MdArrowForwardIos } from 'react-icons/md';
+import InfoBox from './infoBox';
+import { useState } from 'react';
 
 const cinzel = Cinzel({
     subsets: 'latin',
@@ -21,7 +23,9 @@ const documentaries = [
       url:
         "https://ik.imagekit.io/ojfedrprt/Untold__The_Girlfriend_Who_Didn_t_Exist___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667254718355",
       writers: "	Ryan Duffy, Miguel Tamayo, Chapman Way, Maclain Way",
-      genre: "Documentary Films, Sports Movies",
+      genreA: "Documentary",
+      genreB: "USA",
+      genreC: "Sports",
       director: "Chris Brancato, Carlo Bernard, Doug Miro",
       actors: "Mardy Fish, Reggie Miller, Caitlyn Jenner, Christy Martib",
       duration: "1h 45min",
@@ -41,7 +45,9 @@ const documentaries = [
       url:
         "https://ik.imagekit.io/ojfedrprt/jeen-yuhs__A_Kanye_Trilogy___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667254957389",
       writers: "J. Ivy,Coodie Simmons",
-      genre: "HipHop",
+      genreA: "Documentary",
+      genreB: "USA",
+      genreC: "Music / Hip Hop",
       director: "	Coodie Simmons,Chike Ozah",
       actors: "Kanye West",
       duration: "2h 20min",
@@ -62,7 +68,9 @@ const documentaries = [
       url:
         "https://ik.imagekit.io/ojfedrprt/The_Defiant_Ones_I_Official_Trailer__HD__I_Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667255131234",
       writers: "Allen Hughes,Lasse Järvi,Doug Pray",
-      genre: "Fantasy TV Shows, TV Dramas, US TV Shows",
+      genreA: "Documentary",
+      genreB: "USA",
+      genreC: "Music / Hip Hop",
       director: "	Allen Hughes",
       actors: "Dr Dre, Jimmy Lovine",
       duration: "4h 10min",
@@ -83,8 +91,9 @@ const documentaries = [
       url:
         "https://ik.imagekit.io/ojfedrprt/Anelka__Misunderstood___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667255261246",
       writers: "Franck Nataf",
-      genre:
-        "Period drama, Coming-of-ageDocumentary Films, Biographical Documentaries, French, Sports Movies",
+      genreA: "Documentary",
+      genreB: "France",
+      genreC: "Sports / Biography",
       actors: "Nicolas Anelka",
       duration: "2h 35min",
       year: "2021",
@@ -105,8 +114,9 @@ const documentaries = [
         "https://ik.imagekit.io/ojfedrprt/Neymar__The_Perfect_Chaos___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667255415315",
       writers:
         " Russell Ackerman, John Schoenfelder, Kristina Ceyton, Samantha Jennings, Mark Patterson, Кристина Кейтон",
-      genre:
-        "Social & Cultural Docs, Docuseries, Biographical Documentaries, US TV Shows",
+      genreA: "Documentary",
+      genreB: "Brasil",
+      genreC: "Sports / Biography",
       director: "Yolanda Ramke, Ben Howling",
       actors: "Neymar j, David Backham",
       duration: "1h 30min",
@@ -128,8 +138,9 @@ const documentaries = [
         "https://ik.imagekit.io/ojfedrprt/Turning_Point__9_11_and_the_War_on_Terror___Official_Trailer___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667255572524",
       writers:
         "Chris Hemsworth, Joe Russo, Eric Gitter, Peter Schwerin, Mike Larocca, Anthony Russo.",
-      genre:
-        "Docuseries, Political Documentaries, Political TV Shows, US TV Shows",
+      genreA: "Documentary",
+      genreB: "USA",
+      genreC: "Political / History",
       director: "Brian Knappenberger",
       actors: "Chris Hemsworth, Rudhraksh Jaiswal, Randeep Hooda",
       duration: "1h 57min",
@@ -149,7 +160,9 @@ const documentaries = [
       url:
         "https://ik.imagekit.io/ojfedrprt/The_Last_Dance___Relive_the_Phenomenon___Netflix.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1667255690982",
       writers: "Jason Hehir",
-      genre: "Social & Cultural Docs, Docuseries, US TV Shows",
+      genreA: "Documentary",
+      genreB: "USA",
+      genreC: "Sports / Biography",
       director: "	Tom Hoffie, Joanna Werner",
       actors: "Michael Jordan, Scottie Pippen, Dennis Rodman",
       duration: "1h 02min",
@@ -161,19 +174,64 @@ const documentaries = [
   ];
 
 const DocumentariesCarousel = () => {
+
+  const [infoBoxVisibility, setInfoBoxVisibility] = useState(false);
+
+  const [docIndex, setDocIndex] = useState();
+
+  const clickedShowIds = [documentaries[docIndex]]
+
+  const showInfoBox = (event, id) => {
+    setDocIndex(id)
+    setInfoBoxVisibility(true);
+  }
+
+  const closeInfoBox = (event) => {
+    setInfoBoxVisibility(false);
+  }
+
+  
     return(
         <div>
             <p style={cinzel.style} className='flex  items-center px-1 text-white text-base font-semibold py-[1px] pl-1'>Documentaries<div><MdArrowForwardIos size={16}/></div></p>
             <div className='z-10 left-0 right-0 h-[200px]'>
                 <Carousel show={3} slide={3} swiping={true} leftArrow={true} rightArrow={true} infinite={true}>
-                {documentaries.map(documentary =>(
-                        <div key={documentary.id}>
+                {documentaries.map((documentary, index) =>(
+                        <div key={documentary.id} onClick={(event)=>{showInfoBox(event, index)}}>
                             <Card imageMobile={documentary.imageMobile} id={documentary.id} trailer={documentary.url} fullVideo={documentary.fullVideo}/>
                         </div>
                     ))}
 
                 </Carousel>
             </div>
+            {infoBoxVisibility && clickedShowIds.map((clickedShowId,index)=>(
+              <div key={clickedShowId.id}>
+              <InfoBox
+              index={index}
+              imageMobile={clickedShowId.imageMobile}
+              clickedShowIds={clickedShowIds}
+              clickedShowId={clickedShowId}
+              infoBoxVisibility={setInfoBoxVisibility}
+              showInfoBox={showInfoBox}
+              closeInfoBox={closeInfoBox}
+              id={clickedShowId.id}
+              title={clickedShowId.title}
+              image={clickedShowId.image}
+              fullVideo={clickedShowId.fullVideo}
+              url={clickedShowId.url}
+              writers={clickedShowId.writers}
+              genreA={clickedShowId.genreA}
+              director={clickedShowId.director}
+              actors={clickedShowId.actors}
+              duration={clickedShowId.duration}
+              year={clickedShowId.year}
+              age={clickedShowId.age}
+              summary={clickedShowId.summary}
+              />
+              </div>
+            ))
+              
+            }
         </div>
     )
 }

@@ -167,8 +167,8 @@ const Banner = () => {
 
     return (
         <div
-            className=""
-            style={{ position: "relative", width: "100vw", height: "534px" }}
+            className="relative w-screen h-[534px]"
+            /*style={{ position: "relative", width: "100vw", height: "534px" }}*/
         >
             <div className="absolute top-3/4  text-white z-10  left-0 right-0">
                 <div className="flex flex-col justify-center items-center ">
@@ -198,7 +198,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <div className="">
+
                 <Image
                     src={randomShow.imageMobile}
                     alt="movie-poster"
@@ -208,7 +208,7 @@ const Banner = () => {
                     fill={true}
                     className="rounded-2xl"
                 />
-            </div>
+
         </div>
 
 

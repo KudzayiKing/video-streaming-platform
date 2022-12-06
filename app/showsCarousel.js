@@ -5,6 +5,7 @@ import { Cinzel } from '@next/font/google';
 import { MdArrowForwardIos } from 'react-icons/md';
 import InfoBox from './infoBox';
 import { useState } from 'react';
+import MyListCarousel from './myListCarousel';
 
 const cinzel = Cinzel({
     subsets: 'latin',

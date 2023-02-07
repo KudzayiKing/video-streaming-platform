@@ -10,6 +10,10 @@ module.exports = {
       'none': 'none',
       'blur': 'blur(20px)',
     },
+    // screens: {
+    //   'desktop': '1400px',
+    //   // => @media (min-width: 1280px) { ... }
+    // }
   },
   plugins: [
     require('tailwindcss-filters'),

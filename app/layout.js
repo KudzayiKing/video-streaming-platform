@@ -8,7 +8,7 @@ import ShowsCarousel from './showsCarousel';
 import DocumentariesCarousel from './documentariesCarousel';
 import MyListCarousel from './myListCarousel';
 import HyperBanner from './hyperBanner';
-import AppState from './context/appState';
+import AppState from './context/AppState';
 
 
 

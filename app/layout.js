@@ -465,7 +465,7 @@ export default function RootLayout({ children }) {
             <HyperBanner />
             <MyListCarousel />
           </section>
-          <div>{children}</div>
+          <body>{children}</body>
         </main>
         <footer>
           <ButtonMenu />

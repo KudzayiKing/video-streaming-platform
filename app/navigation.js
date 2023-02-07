@@ -17,7 +17,7 @@ const logo = 'https://ik.imagekit.io/ojfedrprt/ztv-logo_hd.png'
 
 const Navigation = () => {
     return (
-        <div className='relative flex items-center justify-evenly translate-y-full ease-in-out'>
+        <div className='z-40 fixed top-0  flex items-center justify-evenly translate-y-full ease-in-out'>
             <div className='z-40 fixed top-0 h-12 left-0 right-0 mx-auto shadow-xl flex items-center justify-between  text-sm  text-white w-screen bg-grey  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 transform-scale-x-100' >
                 <Image alt='logo' src={logo} width={24} height={24} className='z-10 ml-2' />
                 <Link href={'./'} className='pl-10 lg:pl-[75px] '><p style={cinzel.style} className="text-orange-400 font-semibold pt-0.5 text-lg">ZBC TV</p></Link>

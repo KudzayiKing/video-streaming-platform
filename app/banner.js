@@ -1,14 +1,7 @@
 'use client'
-import Image from "next/image";
-import { FaPlay } from "react-icons/fa";
-import { ImInfo } from "react-icons/im";
-import { FaRegHeart } from "react-icons/fa";
 import { Cinzel } from "@next/font/google";
 import { useEffect, useState, useRef } from "react";
 import InfoBox from "./infoBox";
-import { RiCloseCircleLine } from 'react-icons/ri';
-import ReactPlayer from 'react-player'
-
 
 import { BiVolumeMute } from 'react-icons/bi'
 import { BsFillPlayFill } from 'react-icons/bs'
@@ -21,10 +14,6 @@ const cinzel = Cinzel({
     weight: ["800"],
 });
 
-const cinzelSmall = Cinzel({
-    subsets: "latin",
-    weight: ["600"],
-});
 
 /* Array storing shows info images and links */
 const spotlightShows = [
@@ -279,7 +268,7 @@ const Banner = () => {
                     src={randomShow.trailer}
                     height='100%'
                     width='100%'
-                    poster="https://ik.imagekit.io/ojfedrprt/savanah-poster.jpg"
+                    poster="https://ik.imagekit.io/ojfedrprt/ztv-poster.jpg"
                     autoPlay={true}
                     controls={false}
                     pause={pauseBannerVideo}

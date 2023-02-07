@@ -1,6 +1,5 @@
-import Image from 'next/image'
+'use client';
 import Navigation from './navigation';
-import ButtonMenu from './buttonMenu'
 import Banner from './banner';
 import ShowsCarousel from './showsCarousel';
 import DocumentariesCarousel from './documentariesCarousel';
@@ -20,9 +19,6 @@ const Home = () => {
           <MyListCarousel />
         </section>
       </main>
-      <footer>
-        <ButtonMenu />
-      </footer>
     </div>
   )
 }

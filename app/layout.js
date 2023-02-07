@@ -1,13 +1,6 @@
 
 import './globals.css';
 import Head from 'next/head';
-import Navigation from './navigation';
-import ButtonMenu from './buttonMenu'
-import Banner from './banner';
-import ShowsCarousel from './showsCarousel';
-import DocumentariesCarousel from './documentariesCarousel';
-import MyListCarousel from './myListCarousel';
-import HyperBanner from './hyperBanner';
 import AppState from './context/AppState';
 
 
@@ -456,20 +449,9 @@ export default function RootLayout({ children }) {
         <Head>
           <head />
         </Head>
-        <Navigation />
-        <main className="pt-14">
-          <Banner />
-          <section>
-            <ShowsCarousel />
-            <DocumentariesCarousel />
-            <HyperBanner />
-            <MyListCarousel />
-          </section>
-          <body>{children}</body>
-        </main>
-        <footer>
-          <ButtonMenu />
-        </footer>
+
+        <body>{children}</body>
+
       </html>
     </AppState>
   )

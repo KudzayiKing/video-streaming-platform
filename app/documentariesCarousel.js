@@ -1,18 +1,19 @@
 'use client';
 import Card from './card';
-import { Carousel } from '@trendyol-js/react-carousel';
-import { Cinzel } from '@next/font/google';
+//import { Carousel } from '@trendyol-js/react-carousel';
+//import { Cinzel } from '@next/font/google';
 import { MdArrowForwardIos } from 'react-icons/md';
 import InfoBox from './infoBox';
 import { useState } from 'react';
 import LandscapeCarousel from "react-elastic-carousel";
 import CardCarousel from './cardCarousel';
+import Carousel from "react-elastic-carousel";
 
 
-const cinzel = Cinzel({
-  subsets: 'latin',
-  weight: ['800']
-})
+// const cinzel = Cinzel({
+//   subsets: 'latin',
+//   weight: ['800']
+// })
 
 const documentaries = [
   {
@@ -185,6 +186,15 @@ const breakPoints = [
   { width: 1750, itemsToShow: 6, pagination: false }
 ];
 
+const breakPointsMobile = [
+  { width: 1, itemsToShow: 1, pagination: false },
+  { width: 550, itemsToShow: 2, pagination: false },
+  { width: 92, itemsToShow: 3, itemsToScroll: 3, pagination: false },
+  { width: 1150, itemsToShow: 4, pagination: false },
+  { width: 1450, itemsToShow: 5, pagination: false },
+  { width: 1750, itemsToShow: 6, pagination: false }
+];
+
 
 const DocumentariesCarousel = () => {
 
@@ -206,10 +216,18 @@ const DocumentariesCarousel = () => {
 
   return (
     <div className='flex flex-col'>
-      <p style={cinzel.style} className='flex  items-center  px-1 text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] min-[1920px]:text-2xl min-[1023px]:pl-[60px]'>Documentaries<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
+      <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>Documentaries<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
       {/* Mobile potrait carousel */}
-      <div className='lg:hidden 3xl:hidden flex pl-2 right-0 h-[200px]'>
-        <Carousel show={3} slide={3} swiping={true} leftArrow={true} rightArrow={true} infinite={true} transition={1}>
+      <div className='lg:hidden 3xl:hidden w-[100%] h-[200px]'>
+        <Carousel
+          breakPoints={breakPointsMobile}
+          itemPadding={[1, 62.7]}
+          focusOnSelect={true}
+          enableSwipe={true}
+          enableMouseSwipe={true}
+          showArrows={false}
+          showEmptySlots
+        >
           {documentaries.map((documentary, index) => (
             <div key={documentary.id} onClick={(event) => { showInfoBox(event, index) }}>
               <Card

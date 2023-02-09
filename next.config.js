@@ -8,7 +8,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'ik.imagekit.io',
-        port: '',
         pathname: '/ojfedrprt/**'
       },
     ],

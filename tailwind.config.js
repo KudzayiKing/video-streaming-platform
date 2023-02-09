@@ -14,6 +14,12 @@ module.exports = {
     //   'desktop': '1400px',
     //   // => @media (min-width: 1280px) { ... }
     // }
+    extend: {
+      fontFamily: {
+        cinzel: 'Cinzel, normal'
+      }
+
+    }
   },
   plugins: [
     require('tailwindcss-filters'),

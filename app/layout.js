@@ -1,9 +1,7 @@
-
+'use client';
 import './globals.css';
-import Head from 'next/head';
+import '../app/page.module.css';
 import AppState from './context/AppState';
-
-
 
 const documentaries = [
   {
@@ -430,28 +428,16 @@ const succession = [
 
 ]
 
-
-
-
 export default function RootLayout({ children }) {
-
-
-
-
   return (
     <AppState>
-      <html lang="en" className='relative h-screen'>
+      <html lang="en" className='relative h-screen `${cinzel.variable} font-cinzel`'>
         {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-
-        <Head>
-          <head />
-        </Head>
-
+        <head />
         <body>{children}</body>
-
       </html>
     </AppState>
   )

@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Cinzel } from "@next/font/google";
+//import { Cinzel } from "@next/font/google";
 import { MdArrowForwardIos } from "react-icons/md";
-import { Carousel } from "@trendyol-js/react-carousel";
+//import { Carousel } from "@trendyol-js/react-carousel";
+import Carousel from "react-elastic-carousel";
 import CardLandscape from "./cardLandscape";
 import { useState } from "react";
 import InfoBox from "./infoBox";
@@ -10,10 +11,10 @@ import { BsPlay } from "react-icons/bs";
 import LandscapeCarousel from "react-elastic-carousel";
 import CardCarousel from "./cardCarousel";
 
-const cinzel = Cinzel({
-    subsets: "latin",
-    weight: ["800"],
-});
+// const cinzel = Cinzel({
+//     subsets: "latin",
+//     weight: ["800"],
+// });
 // Show data.
 const succession = [
     {
@@ -308,6 +309,15 @@ const breakPoints2 = [
     { width: 1750, itemsToShow: 6, itemsToScroll: 6, pagination: false },
 ];
 
+const breakPointsMobile = [
+    { width: 1, itemsToShow: 1, pagination: false },
+    { width: 550, itemsToShow: 2, pagination: false },
+    { width: 92, itemsToShow: 2.2, itemsToScroll: 2, pagination: false },
+    { width: 1150, itemsToShow: 4, pagination: false },
+    { width: 1450, itemsToShow: 5, pagination: false },
+    { width: 1750, itemsToShow: 6, pagination: false }
+];
+
 const HyperBanner = () => {
     const [infoBoxVisibility, setInfoBoxVisibility] = useState(false);
     const [showIndex, setShowIndex] = useState();
@@ -325,10 +335,10 @@ const HyperBanner = () => {
         <>
             <div className=" relative w-screen  h-[534px] lg:h-[482px] max-[1279]:h-[681px] lg:max-xl:h-[640px] xl:h-[800px] 2xl:h-[1050px] 2xl:pt-3">
                 <p
-                    style={cinzel.style}
-                    className="flex  items-center  px-3 text-white text-base font-semibold pt-1 py-[1px]  pl-2 min-[1023px]:pl-[60px] 2xl:text-2xl"
+
+                    className="flex  items-center  px-3 font-cinzel text-white text-base font-semibold pt-1 py-[1px]  pl-2 min-[1023px]:pl-[60px] xl:max-2xl:text-xl xl:max-2xl:pt-4 2xl:text-2xl"
                 >
-                    Must Watch Series{" "}
+                    Must Watch Series
                     <div>
                         <MdArrowForwardIos
                             size={16}
@@ -343,8 +353,8 @@ const HyperBanner = () => {
                         className="absolute w-[98%]  bottom-0 flex flex-col items-start"
                     >
                         <p
-                            style={cinzel.style}
-                            className="text-white text-2xl font-normal text-shadow-lg absolute bottom-48 z-20 pl-2 pb-5 lg:pl-[75px] lg:text-4xl xl:text-5xl"
+
+                            className=" font-cinzel text-white text-2xl font-normal text-shadow-lg absolute bottom-48 z-20 pl-2 pb-5 lg:pl-[75px] lg:text-4xl xl:text-5xl"
                         >
                             {info.name}
                         </p>
@@ -401,7 +411,7 @@ const HyperBanner = () => {
                         {/* HD */}
                         <div
                             key={info.id}
-                            className="max-lg:hidden lg:max-xl:hidden  absolute top-0 flex justify-center items-center pt-3 w-screen h-[616px] min-[1023px]:h-[370px] lg:h-[483px] lg:pt-[5px] lg:pr-[22px] xl:h-[681px]"
+                            className="max-lg:hidden lg:max-xl:hidden  absolute top-0 flex justify-center items-center pt-3 w-screen h-[616px] min-[1023px]:h-[370px] lg:h-[483px] lg:pt-[5px] lg:pr-[22px] xl:h-[681px] xl:max-2xl:pt-0"
                         >
                             <Image
                                 src={info.landscape}
@@ -456,19 +466,16 @@ const HyperBanner = () => {
                 {/* Mobile carousel */}
                 <div
                     style={{ WebkitTapHighlightColor: "transparent" }}
-                    className="z-20 lg:hidden absolute bottom-0 left-0 right-0 h-[93px] pl-2 "
+                    className="z-20 lg:hidden absolute bottom-0 w-[100%] h-[93px] "
                 >
                     <Carousel
-                        show={2.3}
-                        slide={2}
-                        swiping={true}
-                        useArrowKeys={true}
-                        leftArrow={true}
-                        rightArrow={true}
-                        infinite={true}
-                        transition={1}
-                        swipeOne={0.9}
-                        responsive={true}
+                        breakPoints={breakPointsMobile}
+                        itemPadding={[1, 5]}
+                        focusOnSelect={true}
+                        enableSwipe={true}
+                        enableMouseSwipe={true}
+                        showArrows={false}
+                        showEmptySlots
                     >
                         {succession.map((series, index) => (
                             <div
@@ -494,6 +501,7 @@ const HyperBanner = () => {
                         ))}
                     </Carousel>
                 </div>
+                {/* Non-Mobile carousel */}
                 <div
                     style={{ WebkitTapHighlightColor: "transparent" }}
                     className="z-20 max-lg:hidden lg:h-[93px] absolute bottom-0 left-0 right-0 h-[93px] pl-2  lg:bottom-0  lg:left-0 lg:right-0 lg:pt-0"

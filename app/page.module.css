@@ -143,4 +143,16 @@
   .logo img {
     filter: invert(1);
   }
+
+  
+.cinzel {
+  font-family: 'Cinzel' , serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+}
+
+.page > *{
+  font-family: var(--cooper-font);
+}
 }

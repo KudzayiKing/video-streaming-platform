@@ -1,10 +1,10 @@
-'use client';
 import Navigation from './navigation';
 import Banner from './banner';
 import ShowsCarousel from './showsCarousel';
 import DocumentariesCarousel from './documentariesCarousel';
 import MyListCarousel from './myListCarousel';
 import HyperBanner from './hyperBanner';
+import '../app/page.module.css';
 
 const Home = () => {
   return (

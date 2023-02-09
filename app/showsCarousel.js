@@ -1,18 +1,13 @@
-'use client';
+'use client'; // When we use hooks we need to use use client side rendering.
 import Card from './card';
-import { Carousel } from '@trendyol-js/react-carousel';
-import { Cinzel } from '@next/font/google';
 import { MdArrowForwardIos } from 'react-icons/md';
 import InfoBox from './infoBox';
 import { useState } from 'react';
 import LandscapeCarousel from "react-elastic-carousel";
+import Carousel from "react-elastic-carousel";
 import CardCarousel from './cardCarousel';
-
-// Custom font.
-const cinzel = Cinzel({
-  subsets: 'latin',
-  weight: ['800']
-})
+import CarouselMobile from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 // Show data.
 const shows = [
@@ -180,7 +175,16 @@ const shows = [
 const breakPoints = [
   { width: 1, itemsToShow: 1, pagination: false },
   { width: 550, itemsToShow: 2, pagination: false },
-  { width: 92, itemsToShow: 5, pagination: false },
+  { width: 92, itemsToShow: 5, itemsToScroll: 5, pagination: false },
+  { width: 1150, itemsToShow: 4, pagination: false },
+  { width: 1450, itemsToShow: 5, pagination: false },
+  { width: 1750, itemsToShow: 6, pagination: false }
+];
+// Breakpoints for mobile carousel, controling how many card to be displayed.
+const breakPointsMobile = [
+  { width: 1, itemsToShow: 1, pagination: false },
+  { width: 550, itemsToShow: 2, pagination: false },
+  { width: 92, itemsToShow: 3, itemsToScroll: 3, pagination: false },
   { width: 1150, itemsToShow: 4, pagination: false },
   { width: 1450, itemsToShow: 5, pagination: false },
   { width: 1750, itemsToShow: 6, pagination: false }
@@ -205,10 +209,18 @@ const ShowsCarousel = () => {
 
   return (
     <div className='z-10 flex flex-col'>
-      <p style={cinzel.style} className='flex  items-center  px-1 text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] min-[1920px]:text-2xl min-[1023px]:pl-[60px]'>TV Series<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
+      <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>TV Series<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
       {/* Mobile potrait carousel */}
-      <div className='lg:hidden 3xl:hidden flex pl-2 right-0 h-[200px]'>
-        <Carousel show={3} slide={3} swiping={true} leftArrow={true} rightArrow={true} infinite={true} transition={1}>
+      <div className='lg:hidden 3xl:hidden w-[100%] h-[200px]'>
+        <Carousel
+          breakPoints={breakPointsMobile}
+          itemPadding={[1, 62.7]}
+          focusOnSelect={true}
+          enableSwipe={true}
+          enableMouseSwipe={true}
+          showArrows={false}
+          showEmptySlots
+        >
           {shows.map((show, index) => (
             <div key={show.id} onClick={(event) => { showInfoBox(event, index) }}>
               <Card
@@ -245,6 +257,7 @@ const ShowsCarousel = () => {
           ))}
         </LandscapeCarousel>
       </div>
+      {/*Modal*/}
       {infoBoxVisibility && clickedShowIds.map((clickedShowId, index) => (
         <div key={clickedShowId.id}>
           <InfoBox

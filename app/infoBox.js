@@ -1,5 +1,4 @@
-'use client'
-import { Cinzel } from "@next/font/google";
+'use client';
 import { FaPlay } from "react-icons/fa";
 import { ImInfo } from "react-icons/im";
 import { FaRegHeart } from "react-icons/fa";
@@ -9,16 +8,6 @@ import React, { useContext, useState } from 'react';
 import AppContext from "./context/AppContext";
 
 
-/* Variable storing Cinzel font values */
-const cinzel = Cinzel({
-    subsets: "latin",
-    weight: ["800"],
-});
-
-const cinzelSmall = Cinzel({
-    subsets: "latin",
-    weight: ["600"],
-});
 
 const InfoBox = ({
     index,
@@ -101,7 +90,10 @@ const InfoBox = ({
     }
 
     return (
-        <div className="flex justify-center items-center overflow-hidden">
+        <div
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="flex justify-center items-center overflow-hidden">
             <div className="z-50  fixed top-0 w-screen h-screen lg:w-[60%] lg:h-[100%] lg:bottom-10 xl:w-[60%] rounded-t-2xl  bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.50]  shadow-lg  xl:bottom-0  xl:rounded-t-3xl 2xl:w-[60%] 2xl:bottom-0">
                 <div className="z-40 flex">
                     {/*<div className="fixed pt-2 pl-2 top-0 left-0 z-40"><RiHome2Line size={20} color={"#fb923c"}/></div>*/}
@@ -134,34 +126,33 @@ const InfoBox = ({
                 </div>
                 {/* Title and summary section */}
                 <div className='pt-4 pl-2 w-[96%] overflow-y-scroll'>
-                    <p style={cinzel.style} className='text-white text-2xl min-[1920px]:text-4xl xl:text-2xl'>{title}</p>
+                    <p className='font-cinzel text-white text-2xl min-[1920px]:text-4xl xl:text-2xl'>{title}</p>
                     <div className='text-[#808080]  pt-2 flex items-center space-x-3 '><p className='text-sm text-orange-400 min-[1920px]:text-lg xl:text-xs'>{genreA}</p><p className='border border-[#808080]  py-[1px] px-[4px] rounded-sm text-xs  min-[1920px]:text-lg  min-[1920px]:py-[0px] min-[1920px]:px-[4px] xl:text-xs'> {age} </p><p className='border border-[#808080]  py-[1px] px-[4px] rounded-sm text-xs  min-[1920px]:text-lg min-[1920px]:py-[0px] min-[1920px]:px-[4px] xl:text-xs'>  HD  </p><p className='text-sm min-[1920px]:text-lg xl:text-xs'>{year}</p><p className='text-sm min-[1920px]:text-lg xl:text-xs'>{duration}</p></div>
                     <p className='text-white text-sm pt-2 min-[1920px]:text-lg xl:text-xs '>{summary}</p>
                     {/* Directors */}
                     <p className='flex items-center space-x-3  pt-4 w-[96%] xl:pt-[6px]'>
                         <span className='text-sm text-orange-400 min-[1920px]:text-lg'>
-                            Directors:{" "}
+                            Directors:
                         </span>
                         <p className='text-sm text-white min-[1920px]:text-lg xl:pt-[2px] xl:text-xs'>{director}</p>
                     </p>
                     {/* Actors */}
                     <p className='flex justify-start items-start space-x-5 pt-4 w-[98%] xl:pt-[6px]'>
                         <p className='flex justify-start items-start text-sm text-orange-400 min-[1920px]:text-lg'>
-                            Actors:{''}
+                            Actors:
                         </p>
                         <p className='text-sm text-white min-[1920px]:text-lg xl:text-xs'>{actors}</p>
                     </p>
                     {/* Writers */}
                     <p className='flex justify-start items-start space-x-5 pt-4 w-[98%] xl:pt-[6px]'>
                         <p className='flex justify-start items-start text-sm text-orange-400 min-[1920px]:text-lg xl:text-xs'>
-                            Writers:{''}
+                            Writers:
                         </p>
                         <p className='text-sm text-white min-[1920px]:text-lg xl:text-xs'>{writers}</p>
                     </p>
                 </div>
             </div>
         </div>
-
     )
 }
 

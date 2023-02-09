@@ -1,5 +1,5 @@
 'use client'
-import { Cinzel } from "@next/font/google";
+//import { Cinzel } from "@next/font/google";
 import { useEffect, useState, useRef } from "react";
 import InfoBox from "./infoBox";
 
@@ -9,10 +9,10 @@ import { BsFillVolumeUpFill } from 'react-icons/bs'
 
 
 /* Variable storing Cinzel font values */
-const cinzel = Cinzel({
-    subsets: "latin",
-    weight: ["800"],
-});
+// const cinzel = Cinzel({
+//     subsets: "latin",
+//     weight: ["800"],
+// });
 
 
 /* Array storing shows info images and links */
@@ -234,11 +234,11 @@ const Banner = () => {
             {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 min-[350px]:h-[25px] min-[350px]:w-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1920px]:h-[45px] min-[1920px]:w-[45px] min-[1920px]:right-12' />
                 : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 min-[350px]:h-[25px] min-[350px]:w-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1920px]:h-[45px] min-[1920px]:w-[45px] min-[1920px]:right-12' />
             }
-            <p style={cinzel.style} className='z-10 absolute text-white text-sm text-shadow-lg pl-[18px] pt-[29px] lg:text-3xl xl:text-4xl 3xl:text-6xl'>New on ZBC TV</p>
-            <p style={cinzel.style} className='z-10 absolute text-white text-2xl text-shadow-lg pl-4 pt-[80px] lg:text-5xl lg:pt-[112px] xl:text-7xl xl:pt-[145px] 3xl:text-8xl 3xl:pt-[185px]'>{randomShow.title}</p>
+            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[18px] pt-[29px] lg:text-3xl xl:text-4xl 3xl:text-6xl'>New on ZBC TV</p>
+            <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-4 pt-[80px] lg:text-5xl lg:pt-[112px] xl:text-7xl xl:pt-[145px] 3xl:text-8xl 3xl:pt-[185px]'>{randomShow.title}</p>
             <div onClick={showInfoBox} className="flex flex-row absolute  justify-evenly items-center h-6 w-32 ml-[8px] z-30 lg:h-11 lg:w-64  lg:pt-[70px] xl:h-12 xl:w-72 xl:pt-[135px] min-[1400px]:ml-[16px] min-[1920px]:h-[128px] min-[1920px]:w-[480px] min-[1920px]:pt-[210px]">
-                <BsFillPlayFill size={17} color={'black'} className=' z-30 absolute left-[34px] text-black mt-36 lg:h-[30px] lg:w-[30px] lg:left-[74px] xl:left-[78px]  xl:h-[34px] xl:w-[34px]  min-[1920px]:w-[44px] min-[1920px]:h-[44px] min-[1920px]:left-[158px] 2xl:mt-20' />
-                <p className=' z-30 absolute  text-[12px] font-semibold  right-5 text-black mt-36 lg:text-[20px] lg:right-[65px] xl:text-[22px] xl:right-[75px] min-[1920px]:text-[28px] min-[1920px]:right-[148px] 2xl:mt-20'>More Info</p>
+                <BsFillPlayFill size={17} className=' z-30 absolute left-[34px] text-orange-400 mt-36 lg:h-[30px] lg:w-[30px] lg:left-[74px] xl:left-[78px]  xl:h-[34px] xl:w-[34px]  min-[1920px]:w-[44px] min-[1920px]:h-[44px] min-[1920px]:left-[158px] 2xl:mt-20' />
+                <p className=' z-30 absolute  text-[12px] font-semibold  right-5 text-orange-400 mt-36 lg:text-[20px] lg:right-[65px] xl:text-[22px] xl:right-[75px] min-[1920px]:text-[28px] min-[1920px]:right-[148px] 2xl:mt-20'>More Info</p>
                 <div className='z-10 absolute justify-center align-center h-6 w-32 lg:h-11 lg:w-64 xl:h-12 lg:rounded-3xl xl:w-72 xl:rounded-3xl min-[1920px]:rounded-full 2xl:mt-20 bg-white mt-36 ml-[14px] shadow-xl xl:shadow-xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-white border-[0.7px] min-[1920px]:h-[60px] min-[1920px]:w-[500px]'>
                 </div>
             </div>
@@ -271,7 +271,7 @@ const Banner = () => {
                     poster="https://ik.imagekit.io/ojfedrprt/ztv-poster.jpg"
                     autoPlay={true}
                     controls={false}
-                    pause={pauseBannerVideo}
+                    pause='false'
                     muted={unmute}
 
                 />

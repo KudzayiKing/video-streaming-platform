@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPlayer from "react-player";
 import { RiArrowLeftLine } from "react-icons/ri";
 
 const MainVideoPlayer = ({

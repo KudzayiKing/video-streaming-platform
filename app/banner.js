@@ -1,19 +1,9 @@
 'use client'
-//import { Cinzel } from "@next/font/google";
 import { useEffect, useState, useRef } from "react";
 import InfoBox from "./infoBox";
-
 import { BiVolumeMute } from 'react-icons/bi'
 import { BsFillPlayFill } from 'react-icons/bs'
 import { BsFillVolumeUpFill } from 'react-icons/bs'
-
-
-/* Variable storing Cinzel font values */
-// const cinzel = Cinzel({
-//     subsets: "latin",
-//     weight: ["800"],
-// });
-
 
 /* Array storing shows info images and links */
 const spotlightShows = [
@@ -220,62 +210,59 @@ const Banner = () => {
 
     return (
         <div className="
-            relative flex flex-col justify-center rounded-3xl   pb-1 top-0 
-            min-[400px]:top-0 min-[400px]:w-screen min-[400px]:h-[320px] 
-            min-[537px]:w-screen min-[537px]:h-[600px] min-[537px]:top-0
-            sm:w-screen sm:h-[600px] sm:top-0 w-screen h-[240px] 
-            lg:w-screen lg:h-[620px] lg:top-0  
-            md:w-screen md:h-[600px] md:top-0 
-            xl:w-screen xl:h-[790px] xl:top-0 
-            2xl:w-screen 2xl:h-[700px] 2xl:top-0
-            min-[1920px]:w-screen min-[1920px]:h-[1100px] min-[1920px]:top-0
-            min-[1920px]:border-12"
+        flex 
+        relative 
+        top-0 
+        self-center 
+        align-center 
+        w-screen 
+        sm:w-screen sm:h-[360px] sm:top-0 
+        md:w-screen md:h-[432px] md:top-0 
+        lg:w-screen lg:h-[544px] lg:top-0  
+        xl:w-screen xl:h-[720px] xl:top-0 
+        2xl:w-screen 2xl:h-[854px] 2xl:top-0 
+        3xl:w-screen  3xl:h-[1079px]
+        "
         >
-            {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 min-[350px]:h-[25px] min-[350px]:w-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1920px]:h-[45px] min-[1920px]:w-[45px] min-[1920px]:right-12' />
-                : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 min-[350px]:h-[25px] min-[350px]:w-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1920px]:h-[45px] min-[1920px]:w-[45px] min-[1920px]:right-12' />
+            {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
+                : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
             }
-            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[18px] pt-[29px] lg:text-3xl xl:text-4xl 3xl:text-6xl'>New on ZBC TV</p>
-            <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-4 pt-[80px] lg:text-5xl lg:pt-[112px] xl:text-7xl xl:pt-[145px] 3xl:text-8xl 3xl:pt-[185px]'>{randomShow.title}</p>
-            <div onClick={showInfoBox} className="flex flex-row absolute  justify-evenly items-center h-6 w-32 ml-[8px] z-30 lg:h-11 lg:w-64  lg:pt-[70px] xl:h-12 xl:w-72 xl:pt-[135px] min-[1400px]:ml-[16px] min-[1920px]:h-[128px] min-[1920px]:w-[480px] min-[1920px]:pt-[210px]">
-                <BsFillPlayFill size={17} className=' z-30 absolute left-[34px] text-orange-400 mt-36 lg:h-[30px] lg:w-[30px] lg:left-[74px] xl:left-[78px]  xl:h-[34px] xl:w-[34px]  min-[1920px]:w-[44px] min-[1920px]:h-[44px] min-[1920px]:left-[158px] 2xl:mt-20' />
-                <p className=' z-30 absolute  text-[12px] font-semibold  right-5 text-orange-400 mt-36 lg:text-[20px] lg:right-[65px] xl:text-[22px] xl:right-[75px] min-[1920px]:text-[28px] min-[1920px]:right-[148px] 2xl:mt-20'>More Info</p>
-                <div className='z-10 absolute justify-center align-center h-6 w-32 lg:h-11 lg:w-64 xl:h-12 lg:rounded-3xl xl:w-72 xl:rounded-3xl min-[1920px]:rounded-full 2xl:mt-20 bg-white mt-36 ml-[14px] shadow-xl xl:shadow-xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-white border-[0.7px] min-[1920px]:h-[60px] min-[1920px]:w-[500px]'>
+            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[16px] pt-[75px] lg:pl-[16px] lg:pt-[220px] lg:text-3xl xl:pt-[310px] xl:text-4xl 3xl:text-6xl 3xl:pt-[450px]'>New on ZBC TV</p>
+            <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-4 pt-[92px] lg:text-5xl lg:pt-[262px] xl:text-7xl xl:pt-[350px] 3xl:text-8xl 3xl:pt-[525px]'>{randomShow.title}</p>
+            <div onClick={showInfoBox} className="flex flex-row absolute  justify-evenly items-center h-6 w-32 pt-[60px] ml-[8px] z-30 lg:h-11 lg:w-64  lg:pt-[270px] xl:h-12 xl:w-72 xl:pt-[375px] 2xl:ml-[16px] 3xl:h-[70px] 3xl:w-[480px] 3xl:mt-[200px]">
+                <BsFillPlayFill size={17} className=' z-30 absolute left-[34px] text-orange-400 mt-36 lg:h-[30px] lg:w-[30px] lg:left-[74px] xl:left-[78px]  xl:h-[34px] xl:w-[34px] 2xl:mt-20 3xl:w-[44px] 3xl:h-[44px] 3xl:left-[158px] 3xl:mt-[200px] ' />
+                <p className=' z-30 cursor-pointer absolute  text-[12px] font-semibold  right-5 text-orange-400 mt-36 lg:text-[20px] lg:right-[65px] xl:text-[22px] xl:right-[75px] 2xl:mt-20 3xl:text-[28px] 3xl:right-[148px] 3xl:mt-[200px] '>More Info</p>
+                <div className='z-10 absolute justify-center align-center h-6 w-32 lg:h-11 lg:w-64 xl:h-12 lg:rounded-3xl xl:w-72 xl:rounded-3xl 3xl:rounded-full 3xl:h-[70px] 3xl:w-[480px] 3xl:mt-[200px] 2xl:mt-20 bg-white mt-36 ml-[14px] shadow-xl xl:shadow-xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-white border-[0.7px] '>
                 </div>
             </div>
             <div className="
                 flex 
                 relative 
                 top-0 
-                h-[224px]
-                rounded-3xl 
                 self-center 
                 align-center 
-                overflow-hidden 
-                border-4 
-                border-[#2d2c2c] 
-                min-[400px]:top-0 min-[400px]:w-screen min-[400px]:h-[320px] 
-                min-[537px]:w-screen min-[537px]:h-[600px] min-[537px]:top-0
-                sm:w-screen sm:h-[600px] sm:top-0 w-screen 
-                lg:w-screen lg:h-[582px] lg:top-0  lg:rounded-[44px]
-                md:w-screen md:h-[600px] md:top-0 
-                xl:w-screen xl:h-[726px] xl:top-0 
-                2xl:w-screen 2xl:h-[700px] 2xl:top-0 2xl:rounded-[74px]
-                min-[1920px]:w-screen min-[1920px]:h-[1100px] min-[1920px]:top-0 min-[1920px]:rounded-[100px]
-                min-[1920px]:border-12
+                w-screen 
+                sm:w-screen sm:h-[360px] sm:top-0 
+                md:w-screen md:h-[432px] md:top-0 
+                lg:w-screen lg:h-[576px] lg:top-0  
+                xl:w-screen xl:h-[720px] xl:top-0 
+                2xl:w-screen 2xl:h-[854px] 2xl:top-0 
+                3xl:w-screen  3xl:h-[1079px]
+                aspect-w-16 aspect-h-9
                 ">
                 {/* Video Player */}
                 <video
                     src={randomShow.trailer}
-                    height='100%'
-                    width='100%'
                     poster="https://ik.imagekit.io/ojfedrprt/ztv-poster.jpg"
                     autoPlay={true}
                     controls={false}
                     pause='false'
                     muted={unmute}
+                    className="
+
+                         "
 
                 />
-
             </div>
             <div>
                 {

@@ -17,12 +17,17 @@ module.exports = {
     extend: {
       fontFamily: {
         cinzel: 'Cinzel, normal'
-      }
+      },
+      screens: {
+        '3xl': '1920px',
+        // => @media (min-width: 1920px) { ... }
+      },
 
     }
   },
   plugins: [
     require('tailwindcss-filters'),
-    require('tailwindcss-textshadow')
+    require('tailwindcss-textshadow'),
+    require('@tailwindcss/aspect-ratio')
   ],
 }

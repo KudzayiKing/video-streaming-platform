@@ -336,7 +336,7 @@ const HyperBanner = () => {
             <div className=" relative w-screen  h-[534px] lg:h-[482px] max-[1279]:h-[681px] lg:max-xl:h-[640px] xl:h-[800px] 2xl:h-[1050px] 2xl:pt-3">
                 <p
 
-                    className="flex  items-center  px-3 font-cinzel text-white text-base font-semibold pt-1 py-[1px]  pl-2 min-[1023px]:pl-[60px] xl:max-2xl:text-xl xl:max-2xl:pt-4 2xl:text-2xl"
+                    className="flex  items-center  px-3 font-cinzel text-white text-base font-semibold pt-1 py-[1px]  pl-2 lg:pl-[60px] xl:pl-[60px] xl:max-2xl:text-xl xl:max-2xl:pt-4 2xl:text-2xl"
                 >
                     Must Watch Series
                     <div>
@@ -411,7 +411,7 @@ const HyperBanner = () => {
                         {/* HD */}
                         <div
                             key={info.id}
-                            className="max-lg:hidden lg:max-xl:hidden  absolute top-0 flex justify-center items-center pt-3 w-screen h-[616px] min-[1023px]:h-[370px] lg:h-[483px] lg:pt-[5px] lg:pr-[22px] xl:h-[681px] xl:max-2xl:pt-0"
+                            className="max-lg:hidden lg:max-xl:hidden  absolute top-0 flex justify-center items-center pt-3 w-screen h-[616px] min-[1023px]:h-[370px] lg:h-[483px] lg:pt-[5px] lg:pr-[22px] xl:h-[643px] xl:max-2xl:pt-0"
                         >
                             <Image
                                 src={info.landscape}

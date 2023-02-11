@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       <Navigation />
-      <main className="pt-14">
+      <main className='max-lg:pt-14'>
         <Banner />
         <section>
           <ShowsCarousel />

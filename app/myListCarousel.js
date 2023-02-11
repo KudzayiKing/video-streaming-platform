@@ -199,7 +199,7 @@ const MyListCarousel = () => {
 
   return (
     <div className='lg:pt-3 xl:pt-32'>
-      {favourites.length > 0 && <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-10 py-[1px] pl-2 lg:pl-[60px] xl:max-2xl:text-xl 2xl:text-2xl'>My List<div><MdArrowForwardIos size={16} className='2xl:w-[24px] 2xl:h-[24px] 2xl:pl-1' /></div></p>}
+      {favourites.length > 0 && <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-10 py-[1px] pl-2 lg:pl-[60px] xl:pl-[60px] xl:max-2xl:text-xl 2xl:text-2xl'>My List<div><MdArrowForwardIos size={16} className='2xl:w-[24px] 2xl:h-[24px] 2xl:pl-1' /></div></p>}
       {/* Mobile potrait carousel */}
       <div className='lg:hidden 3xl:hidden  flex  z-10  h-[200px]  w-[100%]'>
         <Carousel

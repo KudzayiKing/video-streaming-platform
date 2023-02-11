@@ -216,7 +216,7 @@ const DocumentariesCarousel = () => {
 
   return (
     <div className='flex flex-col'>
-      <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>Documentaries<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
+      <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] lg:pl-[60px] xl:pl-[60px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>Documentaries<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
       {/* Mobile potrait carousel */}
       <div className='lg:hidden 3xl:hidden w-[100%] h-[200px]'>
         <Carousel

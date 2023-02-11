@@ -209,7 +209,7 @@ const ShowsCarousel = () => {
 
   return (
     <div className='z-10 flex flex-col'>
-      <p className='flex  items-center  px-1 font-cinzel text-white text-base font-semibold pt-1 py-[1px] pl-2 min-[1920px]:pl-[54px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>TV Series<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
+      <p className='flex  items-center pt-2  px-1 font-cinzel text-white text-base font-semibold  py-[1px] pl-2 min-[1920px]:pl-[54px] lg:pl-[60px] lg:pt-6 xl:pl-[60px] xl:max-2xl:text-xl 2xl:text-2xl min-[1023px]:pl-[60px]'>TV Series<div><MdArrowForwardIos size={16} className='min-[1920px]:w-[24px] min-[1920px]:h-[24px] min-[1920px]:pl-1' /></div></p>
       {/* Mobile potrait carousel */}
       <div className='lg:hidden 3xl:hidden w-[100%] h-[200px]'>
         <Carousel

@@ -190,7 +190,7 @@ const Banner = () => {
             /* Use Math.floor Math.random to randomly pick 1 show from spotlightShows array and set it to randomShow*/
             setRandomShow(spotlightShows[Math.floor(Math.random() * spotlightShows.length)]);
 
-        }, 120000)
+        }, 180000)
 
     }, []);
 
@@ -232,11 +232,11 @@ const Banner = () => {
             {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
                 : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
             }
-            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[6px] pt-[75px] lg:pl-[6px] lg:pt-[220px] lg:text-3xl xl:pt-[300px] xl:text-4xl 3xl:text-6xl 3xl:pt-[450px]'>New on ZBC TV</p>
+            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[6px] pt-[75px] lg:pl-[6px] lg:pt-[230px] lg:text-3xl xl:pt-[315px] xl:text-4xl 3xl:text-6xl 3xl:pt-[470px]'>New on ZBC TV</p>
             <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-[6px] pt-[92px] lg:text-5xl  lg:pt-[262px] xl:text-7xl xl:pt-[350px] 3xl:text-8xl 3xl:pt-[525px]'>{randomShow.title}</p>
-            <div onClick={showInfoBox} className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4  lg:pt-[280px] xl:h-12 xl:w-2/4 xl:pt-[395px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[190px]">
+            <div onClick={showInfoBox} className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4 lg:ml-[4px] lg:pt-[285px] xl:h-12 xl:w-2/4 xl:pt-[380px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[180px]">
 
-                <p className='max-lg:hidden z-30 cursor-pointer absolute  text-[12px] font-normal lg:pl-1 lg:mt-[165px] lg:text-lg  text-white mt-38 xl:text-xl xl:mt-[175] 2xl:mt-20 3xl:text-[28px] 3xl:pl-1 3xl:mt-[200px] '>{randomShow.summary}</p>
+                <p className='max-lg:hidden z-30 cursor-pointer absolute  text-[12px] font-normal lg:pl-1 lg:mt-[175px] lg:text-lg  text-white mt-38 xl:text-xl xl:mt-[170] 2xl:mt-20 3xl:text-[28px] 3xl:pl-1 3xl:mt-[195px] '>{randomShow.summary}</p>
 
             </div>
             <div className="

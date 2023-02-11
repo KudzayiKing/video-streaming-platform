@@ -185,6 +185,13 @@ const Banner = () => {
     useEffect(() => {
         /* Use Math.floor Math.random to randomly pick 1 show from spotlightShows array and set it to randomShow*/
         setRandomShow(spotlightShows[Math.floor(Math.random() * spotlightShows.length)]);
+
+        setInterval(() => {
+            /* Use Math.floor Math.random to randomly pick 1 show from spotlightShows array and set it to randomShow*/
+            setRandomShow(spotlightShows[Math.floor(Math.random() * spotlightShows.length)]);
+
+        }, 120000)
+
     }, []);
 
 
@@ -213,8 +220,6 @@ const Banner = () => {
         flex 
         relative 
         top-0 
-        self-center 
-        align-center 
         w-screen 
         sm:w-screen sm:h-[360px] sm:top-0 
         md:w-screen md:h-[432px] md:top-0 
@@ -227,20 +232,17 @@ const Banner = () => {
             {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
                 : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
             }
-            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[16px] pt-[75px] lg:pl-[16px] lg:pt-[220px] lg:text-3xl xl:pt-[310px] xl:text-4xl 3xl:text-6xl 3xl:pt-[450px]'>New on ZBC TV</p>
-            <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-4 pt-[92px] lg:text-5xl lg:pt-[262px] xl:text-7xl xl:pt-[350px] 3xl:text-8xl 3xl:pt-[525px]'>{randomShow.title}</p>
-            <div onClick={showInfoBox} className="flex flex-row absolute  justify-evenly items-center h-6 w-32 pt-[60px] ml-[8px] z-30 lg:h-11 lg:w-64  lg:pt-[270px] xl:h-12 xl:w-72 xl:pt-[375px] 2xl:ml-[16px] 3xl:h-[70px] 3xl:w-[480px] 3xl:mt-[200px]">
-                <BsFillPlayFill size={17} className=' z-30 absolute left-[34px] text-orange-400 mt-36 lg:h-[30px] lg:w-[30px] lg:left-[74px] xl:left-[78px]  xl:h-[34px] xl:w-[34px] 2xl:mt-20 3xl:w-[44px] 3xl:h-[44px] 3xl:left-[158px] 3xl:mt-[200px] ' />
-                <p className=' z-30 cursor-pointer absolute  text-[12px] font-semibold  right-5 text-orange-400 mt-36 lg:text-[20px] lg:right-[65px] xl:text-[22px] xl:right-[75px] 2xl:mt-20 3xl:text-[28px] 3xl:right-[148px] 3xl:mt-[200px] '>More Info</p>
-                <div className='z-10 absolute justify-center align-center h-6 w-32 lg:h-11 lg:w-64 xl:h-12 lg:rounded-3xl xl:w-72 xl:rounded-3xl 3xl:rounded-full 3xl:h-[70px] 3xl:w-[480px] 3xl:mt-[200px] 2xl:mt-20 bg-white mt-36 ml-[14px] shadow-xl xl:shadow-xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-white border-[0.7px] '>
-                </div>
+            <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[6px] pt-[75px] lg:pl-[6px] lg:pt-[220px] lg:text-3xl xl:pt-[300px] xl:text-4xl 3xl:text-6xl 3xl:pt-[450px]'>New on ZBC TV</p>
+            <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-[6px] pt-[92px] lg:text-5xl  lg:pt-[262px] xl:text-7xl xl:pt-[350px] 3xl:text-8xl 3xl:pt-[525px]'>{randomShow.title}</p>
+            <div onClick={showInfoBox} className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4  lg:pt-[280px] xl:h-12 xl:w-2/4 xl:pt-[395px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[190px]">
+
+                <p className='max-lg:hidden z-30 cursor-pointer absolute  text-[12px] font-normal lg:pl-1 lg:mt-[165px] lg:text-lg  text-white mt-38 xl:text-xl xl:mt-[175] 2xl:mt-20 3xl:text-[28px] 3xl:pl-1 3xl:mt-[200px] '>{randomShow.summary}</p>
+
             </div>
             <div className="
                 flex 
                 relative 
                 top-0 
-                self-center 
-                align-center 
                 w-screen 
                 sm:w-screen sm:h-[360px] sm:top-0 
                 md:w-screen md:h-[432px] md:top-0 

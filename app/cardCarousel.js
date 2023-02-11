@@ -25,7 +25,7 @@ const CardCarousel = ({ image, trailer }) => {
                 width="290"
                 className='z-20 h-[160px] w-[290px] rounded-3xl lg:max-xl:rounded-xl lg:max-xl:h-[93px] lg:max-xl:w-[165px] xl:rounded-2xl'
             />
-            {isHovered && <video src={trailer} autoPlay={true} muted={false} className='w-[290px] h-[160px] scale-150 absolute top-[6px]  rounded-3xl z-30' />}
+            {isHovered && <video src={trailer} autoPlay={true} muted={false} className='z-50 lg:scale-105 xl:scale-150 w-[290px] h-[160px]  absolute  rounded-3xl' />}
 
         </div>
     )

@@ -234,7 +234,7 @@ const Banner = () => {
             }
             <p className='z-10 absolute font-cinzel text-white text-sm text-shadow-lg pl-[6px] pt-[75px] lg:pl-[6px] lg:pt-[230px] lg:text-3xl xl:pt-[315px] xl:text-4xl 3xl:text-6xl 3xl:pt-[470px]'>New on ZBC TV</p>
             <p className='z-10 absolute font-cinzel text-white font-bold text-lg text-shadow-lg pl-[6px] pt-[92px] lg:text-5xl  lg:pt-[262px] xl:text-7xl xl:pt-[350px] 3xl:text-8xl 3xl:pt-[525px]'>{randomShow.title}</p>
-            <div onClick={showInfoBox} className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4 lg:ml-[4px] lg:pt-[285px] xl:h-12 xl:w-2/4 xl:pt-[380px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[180px]">
+            <div className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4 lg:ml-[4px] lg:pt-[285px] xl:h-12 xl:w-2/4 xl:pt-[380px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[180px]">
 
                 <p className='max-lg:hidden z-30 cursor-pointer absolute  text-[12px] font-normal lg:pl-1 lg:mt-[175px] lg:text-lg  text-white mt-38 xl:text-xl xl:mt-[170] 2xl:mt-20 3xl:text-[28px] 3xl:pl-1 3xl:mt-[195px] '>{randomShow.summary}</p>
 

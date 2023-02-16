@@ -186,6 +186,7 @@ const Banner = () => {
     const [pauseBannerVideo, setPauseBannerVideo] = useState(true)
     const [unmute, setUnmute] = useState(true);
     const [fullVideoPlaying, setFullVideoPlaying] = useState(false)
+    const [playing, setPlaying] = useState(true)
 
 
     /*State to store random show */
@@ -238,7 +239,7 @@ const Banner = () => {
             <>
                 {fullVideoPlaying && (
                     <>
-                        <div className="z-50 fixed top-0 w-screen h-screen lg:w-screen lg:h-screen xl:w-screen xl:h-screen 2xl:w-screen 2xl:h-screen 3xl:w-screen 3xl:h-screen">
+                        <div className="z-[100] fixed top-0 w-screen h-screen lg:w-screen lg:h-screen xl:w-screen xl:h-screen 2xl:w-screen 2xl:h-screen 3xl:w-screen 3xl:h-screen">
                             <div className="main-video-player">
                                 <div className=" hover:text-orange-400 cursor-pointer  z-[100] w-[85px] h-[41px] xl:w-[125px] xl:h-[65px] absolute left-2 top-4 flex justify-center items-center" onClick={closeVideoPlayer}>
                                     <RiArrowLeftLine onClick={closeVideoPlayer} className=" w-6 h-6 xl:w-8 xl:h-8" />
@@ -251,7 +252,7 @@ const Banner = () => {
                                     height="100vh"
                                     muted={false}
                                     loop={false}
-                                    playing={true}
+                                    playing={playing}
                                     controls={true}
                                 />
                             </div>
@@ -259,18 +260,19 @@ const Banner = () => {
                         </div>
                         <div className=" z-[41] fixed flex top-0 right-0 bottom-0 left-0 w-screen h-screen bg-black"></div></>)}
             </>
-            <div className="
-        flex 
-        relative 
-        top-0 
-        w-screen 
-        sm:w-screen sm:h-[360px] sm:top-0 
-        md:w-screen md:h-[432px] md:top-0 
-        lg:w-screen lg:h-[544px] lg:top-0 
-        xl:w-screen xl:h-[720px] xl:top-0 
-        2xl:w-screen 2xl:h-[854px] 2xl:top-0 
-        3xl:w-screen  3xl:h-[1079px]
-        "
+            <div
+                className="
+                    flex 
+                    relative 
+                    top-0 
+                    w-screen
+                    sm:w-screen sm:h-[360px] sm:top-0 
+                    md:w-screen md:h-[432px] md:top-0 
+                    lg:w-screen lg:h-[544px] lg:top-0 
+                    xl:w-screen xl:h-[720px] xl:top-0 
+                    2xl:w-screen 2xl:h-[854px] 2xl:top-0 
+                    3xl:w-screen  3xl:h-[1079px]
+                    "
             >
                 {unmute ? <BiVolumeMute onClick={() => { unMuteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
                     : <BsFillVolumeUpFill onClick={() => { muteSound() }} size={45} color={'white'} className='z-30 absolute right-5 top-5 p-1 w-[25px] h-[25px] lg:top-[47px] lg:h-[35px] lg:w-[35px] xl:top-[58px] xl:right-10 min-[1400px]:top-[30px] min-[1919px]:h-[45px] min-[1919px]:w-[45px] min-[1919px]:right-12' />
@@ -279,9 +281,9 @@ const Banner = () => {
                     <p className='z-10 font-cinzel text-white text-sm text-shadow-lg  lg:text-3xl xl:text-4xl 3xl:text-6xl'>New on ZBC TV</p>
                     <p className='z-10  pb-2 font-cinzel text-white font-bold text-lg text-shadow-lg  lg:text-5xl   xl:text-7xl  3xl:text-8xl '>{randomShow.title}</p>
                     <p className='max-lg:hidden z-30 cursor-pointer absolute text-[12px] font-normal text-shadow-lg lg:pl-1 lg:mt-[90px] lg:text-[16px]  text-white mt-38 xl:text-xl xl:mt-[110px] 2xl:mt-[10px] 3xl:text-[28px]  3xl:mt-[155px] '>{randomShow.summary}</p>
-                    <button onClick={() => { playFullVideo() }} className="absolute flex justify-center items-center  text-orange-500 hover:text-white p-3 h-9 w-36 mt-[50px] lg:mt-[170px] xl:w-44 xl:h-12 xl:mt-[210px] xl:rounded-3xl 2xl:mt-[255px] 2xl:w-52 2xl:h-16 2xl:rounded-full text-sm xl:text-lg rounded-2xl  font-bold  3xl:shadow-2xl bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] space-x-1 shadow-xl border-[rgba(220,220,220,0.3)] border-[1px] ">
-                        <FaPlay className="w-3 h-3 xl:h-4 xl:w-4 2xl:h-5 2xl:w-5 " />
-                        <p>Play</p>
+                    <button onClick={() => { playFullVideo() }} className="absolute flex justify-center items-center  text-orange-500 lg:hover:text-white p-3 h-9 w-36 mt-[50px] lg:mt-[170px] xl:w-44 xl:h-12 xl:mt-[210px] xl:rounded-3xl 2xl:mt-[255px] 2xl:w-52 2xl:h-16 2xl:rounded-full text-sm xl:text-lg rounded-2xl  font-bold  3xl:shadow-2xl bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] space-x-1 shadow-xl border-[rgba(220,220,220,0.3)] border-[1px] ">
+                        <FaPlay onClick={() => { playFullVideo() }} className="w-3 h-3 xl:h-4 xl:w-4 2xl:h-5 2xl:w-5 " />
+                        <p onClick={() => { playFullVideo() }}>Play</p>
                     </button>
                 </div>
 

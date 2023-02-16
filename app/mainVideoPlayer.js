@@ -24,10 +24,6 @@ const MainVideoPlayer = ({
 
     const closeVideoPlayer = () => {
         setFullVideoPlaying(false);
-        setInterval(() => {
-            setFullVideoPlaying(true)
-        }, 5000)
-
     };
 
     return (

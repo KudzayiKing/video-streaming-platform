@@ -12,6 +12,11 @@ const AppReducer = (state, action) => {
                 ...state,
                 favourites: state.favourites.filter((item) => item.id !== action.payload)
             };
+        case 'FULL_VIDEO_TUGGLE':
+            return {
+                fullVidTuggle: state.fullVidTuggle = action.payload
+
+            }
     }
 };
 

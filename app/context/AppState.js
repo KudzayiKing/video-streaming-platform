@@ -280,7 +280,8 @@ const succession = [
 const AppState = (props) => {
     // Initial state.
     const initialState = {
-        favourites: []
+        favourites: [],
+        fullVidTuggle: false
     };
 
     // Function to add show to favourites.
@@ -299,10 +300,18 @@ const AppState = (props) => {
         })
     }
 
+    // Function to open or close full video.
+    const fullVideoTuggle = (x) => {
+        dispatch({
+            type: 'FULL_VIDEO_TUGGLE',
+            payload: x
+        })
+    }
+
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (
-        <AppContext.Provider value={{ addToFavs, removeFromFavs, favourites: state.favourites }}>
+        <AppContext.Provider value={{ addToFavs, removeFromFavs, favourites: state.favourites, fullVideoTuggle, fullVidTuggle: state.fullVidTuggle }}>
             {props.children}
         </AppContext.Provider>
     )

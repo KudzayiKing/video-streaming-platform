@@ -11,10 +11,6 @@ import { BsPlay } from "react-icons/bs";
 import LandscapeCarousel from "react-elastic-carousel";
 import CardCarousel from "./cardCarousel";
 
-// const cinzel = Cinzel({
-//     subsets: "latin",
-//     weight: ["800"],
-// });
 // Show data.
 const succession = [
     {
@@ -367,7 +363,7 @@ const HyperBanner = () => {
                     </div>
                 ))}
                 {/* Glassmorphism layer */}
-                <div className="overflow-hidden absolute z-10 top-[285px] justify-self-center w-[100%] h-[52.5%] lg:top-[390px] lg:w-[887px] lg:flex lg:ml-[58px] lg:h-[45.7%] lg:shadow-xl lg:rounded-b-2xl lg:rounded-t-none xl:top-[527px] xl:ml-[51.5px] xl:w-[1155px] xl:h-[48%] xl:shadow-xl 2xl:w-[1790px] 2xl:top-[780px] 2xl:h-[36.5%] 2xl:shadow-2xl bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] rounded-t-none"></div>
+                <div className="overflow-hidden absolute z-10 top-[285px] justify-self-center w-[100%] h-[52.5%] lg:top-[390px] lg:w-[887px] lg:flex lg:ml-[58px] lg:h-[45.7%] lg:shadow-xl lg:rounded-b-2xl lg:rounded-t-none xl:top-[527px] xl:ml-[51.5px] xl:w-[1155px] xl:h-[48%] xl:shadow-xl 2xl:w-[1790px] 2xl:top-[780px] 2xl:h-[36.5%] 2xl:shadow-2xl 3xl:w-[1785px] 3xl:ml-[56.5px] bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] rounded-t-none"></div>
                 {successionInfo.map((info, index) => (
                     <div
                         key={info.id}
@@ -384,9 +380,6 @@ const HyperBanner = () => {
                                 placeholder="blur"
                                 blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                                 fill={true}
-                                sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                        33vw"
                                 className="rounded-2xl"
                             />
                         </div>
@@ -402,9 +395,6 @@ const HyperBanner = () => {
                                 blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                                 width={887}
                                 height={482}
-                                sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                    33vw"
                                 className="rounded-2xl"
                             />
                         </div>
@@ -420,9 +410,6 @@ const HyperBanner = () => {
                                 blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                                 width={1153}
                                 height={627}
-                                sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                    33vw"
                                 className="rounded-2xl"
                             />
                         </div>
@@ -437,9 +424,6 @@ const HyperBanner = () => {
                                 blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                                 width={1253}
                                 height={681}
-                                sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                    33vw"
                                 className="rounded-2xl"
                             />
                         </div>
@@ -455,9 +439,6 @@ const HyperBanner = () => {
                                 blurDataURL="https://ik.imagekit.io/ojfedrprt/10x10-5f5f5f7f.png"
                                 width={1785}
                                 height={971}
-                                sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                    33vw"
                                 className="rounded-2xl"
                             />
                         </div>

@@ -281,15 +281,10 @@ const Banner = () => {
                     <p className='z-10 font-cinzel text-white text-sm text-shadow-lg  lg:text-3xl xl:text-4xl 3xl:text-6xl'>New on ZBC TV</p>
                     <p className='z-10  pb-2 font-cinzel text-white font-bold text-lg text-shadow-lg  lg:text-5xl   xl:text-7xl  3xl:text-8xl '>{randomShow.title}</p>
                     <p className='max-lg:hidden z-30 cursor-pointer absolute text-[12px] font-normal text-shadow-lg lg:pl-1 lg:mt-[90px] lg:text-[16px]  text-white mt-38 xl:text-xl xl:mt-[110px] 2xl:mt-[10px] 3xl:text-[28px]  3xl:mt-[155px] '>{randomShow.summary}</p>
-                    <button onClick={() => { playFullVideo() }} className="absolute flex justify-center items-center  text-orange-500 lg:hover:text-white p-3 h-9 w-36 mt-[50px] lg:mt-[170px] xl:w-44 xl:h-12 xl:mt-[210px] xl:rounded-3xl 2xl:mt-[255px] 2xl:w-52 2xl:h-16 2xl:rounded-full text-sm xl:text-lg rounded-2xl  font-bold  3xl:shadow-2xl bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] space-x-1 shadow-xl border-[rgba(220,220,220,0.3)] border-[1px] ">
+                    <button onClick={() => { playFullVideo() }} className="z-[39] absolute flex justify-center items-center  text-orange-500 hover:text-white p-3 h-9 w-36 mt-[50px] lg:mt-[170px] xl:w-44 xl:h-12 xl:mt-[210px] xl:rounded-3xl 2xl:mt-[255px] 2xl:w-52 2xl:h-16 2xl:rounded-full text-sm xl:text-lg rounded-2xl  font-bold  3xl:shadow-2xl bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[0.05] space-x-1 shadow-xl border-[rgba(220,220,220,0.3)] border-[1px] ">
                         <FaPlay onClick={() => { playFullVideo() }} className="w-3 h-3 xl:h-4 xl:w-4 2xl:h-5 2xl:w-5 " />
                         <p onClick={() => { playFullVideo() }}>Play</p>
                     </button>
-                </div>
-
-                <div className="flex flex-row absolute  justify-start items-center h-12 w-60 pt-[180px] ml-[8px] z-30 lg:h-11 lg:w-2/4 lg:ml-[4px] lg:pt-[285px] xl:h-12 xl:w-2/4 xl:pt-[380px] 2xl:ml-[8px] 3xl:h-[70px] 3xl:w-2/4 3xl:mt-[180px]">
-
-
                 </div>
                 <div className="
                 flex 
